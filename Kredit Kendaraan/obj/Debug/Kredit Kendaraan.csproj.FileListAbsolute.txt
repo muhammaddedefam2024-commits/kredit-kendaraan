@@ -1,0 +1,21 @@
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\bin\Debug\Kredit Kendaraan.exe.config
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\bin\Debug\Kredit Kendaraan.exe
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\bin\Debug\Kredit Kendaraan.pdb
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\bin\Debug\Guna.UI2.dll
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\bin\Debug\MySql.Data.dll
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\bin\Debug\Google.Protobuf.dll
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\bin\Debug\MySql.Data.xml
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit Kendaraan.csprojAssemblyReference.cache
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit_Kendaraan.Form1.resources
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit_Kendaraan.Properties.Resources.resources
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit Kendaraan.csproj.GenerateResource.cache
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit Kendaraan.csproj.CoreCompileInputs.cache
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit Kendaraan.csproj.CopyComplete
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit Kendaraan.exe
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit Kendaraan.pdb
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit_Kendaraan.Fuser.resources
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit_Kendaraan.FormAdmin.resources
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit_Kendaraan.FormDataMaster.resources
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit_Kendaraan.Form2.resources
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit_Kendaraan.Transaksi.resources
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit_Kendaraan.Kendaraan.resources
