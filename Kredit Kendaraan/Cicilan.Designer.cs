@@ -41,6 +41,7 @@ namespace Kredit_Kendaraan
             this.Harga = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SisaKredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tanggal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -104,7 +105,8 @@ namespace Kredit_Kendaraan
             this.Kendaraan,
             this.Harga,
             this.DP,
-            this.SisaKredit});
+            this.SisaKredit,
+            this.Tanggal});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -175,6 +177,13 @@ namespace Kredit_Kendaraan
             this.SisaKredit.Name = "SisaKredit";
             this.SisaKredit.Width = 150;
             // 
+            // Tanggal
+            // 
+            this.Tanggal.HeaderText = "Tanggal";
+            this.Tanggal.MinimumWidth = 8;
+            this.Tanggal.Name = "Tanggal";
+            this.Tanggal.Width = 150;
+            // 
             // Cicilan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -203,5 +212,6 @@ namespace Kredit_Kendaraan
         private System.Windows.Forms.DataGridViewTextBoxColumn Harga;
         private System.Windows.Forms.DataGridViewTextBoxColumn DP;
         private System.Windows.Forms.DataGridViewTextBoxColumn SisaKredit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tanggal;
     }
 }

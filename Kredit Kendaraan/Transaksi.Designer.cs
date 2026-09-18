@@ -48,12 +48,14 @@ namespace Kredit_Kendaraan
             this.label2 = new System.Windows.Forms.Label();
             this.txtsisa = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtnama = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Date = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.IDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pelanggan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kendaraan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Harga = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SisaKredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tanggal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Hapus = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
@@ -209,6 +211,7 @@ namespace Kredit_Kendaraan
             this.Harga,
             this.DP,
             this.SisaKredit,
+            this.Tanggal,
             this.Edit,
             this.Hapus});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -306,6 +309,7 @@ namespace Kredit_Kendaraan
             // 
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.Date);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtsisa);
             this.panel2.Controls.Add(this.button1);
@@ -388,6 +392,24 @@ namespace Kredit_Kendaraan
             this.txtnama.TabIndex = 30;
             this.txtnama.TextChanged += new System.EventHandler(this.txtnama_TextChanged);
             // 
+            // Date
+            // 
+            this.Date.Animated = true;
+            this.Date.BackColor = System.Drawing.Color.Transparent;
+            this.Date.Checked = true;
+            this.Date.FillColor = System.Drawing.Color.White;
+            this.Date.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Date.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Date.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.Date.Location = new System.Drawing.Point(693, 139);
+            this.Date.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.Date.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(318, 57);
+            this.Date.TabIndex = 45;
+            this.Date.Value = new System.DateTime(2026, 9, 18, 15, 9, 50, 274);
+            this.Date.ValueChanged += new System.EventHandler(this.guna2DateTimePicker1_ValueChanged);
+            // 
             // IDT
             // 
             this.IDT.HeaderText = "IDT";
@@ -429,6 +451,13 @@ namespace Kredit_Kendaraan
             this.SisaKredit.MinimumWidth = 8;
             this.SisaKredit.Name = "SisaKredit";
             this.SisaKredit.Width = 150;
+            // 
+            // Tanggal
+            // 
+            this.Tanggal.HeaderText = "Tanggal";
+            this.Tanggal.MinimumWidth = 8;
+            this.Tanggal.Name = "Tanggal";
+            this.Tanggal.Width = 150;
             // 
             // Edit
             // 
@@ -485,12 +514,14 @@ namespace Kredit_Kendaraan
         private Guna.UI2.WinForms.Guna2TextBox txtnama;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtsisa;
+        private Guna.UI2.WinForms.Guna2DateTimePicker Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pelanggan;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kendaraan;
         private System.Windows.Forms.DataGridViewTextBoxColumn Harga;
         private System.Windows.Forms.DataGridViewTextBoxColumn DP;
         private System.Windows.Forms.DataGridViewTextBoxColumn SisaKredit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tanggal;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Hapus;
     }

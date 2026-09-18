@@ -30,7 +30,9 @@ namespace Kredit_Kendaraan
                 string harga = "" + baris["Harga"];
                 string dp = "" + baris["DP"];
                 string sisa = "" + baris["Sisa_kredit"];
-                dataGridView1.Rows.Add(idt, nama, ken, harga, dp, sisa);
+                string tgl = "" + baris["Tanggal"];
+
+                dataGridView1.Rows.Add(idt, nama, ken, harga, dp, sisa, tgl);
             }
         }
 
@@ -56,7 +58,9 @@ namespace Kredit_Kendaraan
                 string harga = "" + baris["Harga"];
                 string dp = "" + baris["DP"];
                 string sisa = "" + baris["Sisa_kredit"];
-                dataGridView1.Rows.Add(idt, nama, ken, harga, dp, sisa);
+                string tgl = "" + baris["Tanggal"];
+
+                dataGridView1.Rows.Add(idt, nama, ken, harga, dp, sisa, tgl);
             }
         }
     }

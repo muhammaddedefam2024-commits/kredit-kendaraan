@@ -36,7 +36,11 @@ namespace Kredit_Kendaraan
                 string harga = "" + baris["Harga"];
                 string dp = "" + baris["DP"];
                 string sisa = "" + baris["Sisa_kredit"];
-                dataGridView1.Rows.Add(idt, nama, ken, harga, dp, sisa);
+                string tgl = "" + baris["Tanggal"];
+
+                dataGridView1.Rows.Add(idt, nama, ken, harga, dp, sisa, tgl);
+
+               
             }
         }
 
@@ -78,8 +82,10 @@ namespace Kredit_Kendaraan
                 string harga = txtharga.Text;
                 string dp = txtdp.Text;
                 string sisa = txtsisa.Text;
+                string tanggal = Date.Value.ToString("yyyy-MM-dd");
 
-                DB.crud($"INSERT INTO transaksi VALUES (null,'{na}','{ken}','{harga}','{dp}','{sisa}')");
+
+                DB.crud($"INSERT INTO transaksi VALUES (null,'{na}','{ken}','{harga}','{dp}','{sisa}','{tanggal}')");
                 bersih();
                 tampildata();
             }
@@ -97,8 +103,9 @@ namespace Kredit_Kendaraan
             string harga = txtharga.Text;
             string dp = txtdp.Text;
             string sisa = txtsisa.Text;
+            string tanggal = Date.Value.ToString("yyyy-MM-dd");
 
-            DB.crud($"update transaksi Set Pelanggan = '{na}', Kendaraan = '{ken}', Harga = '{harga}', DP = '{dp}', Sisa_kredit = '{sisa}' where  idtrans = '{label7.Text}'");
+            DB.crud($"update transaksi Set Pelanggan = '{na}', Kendaraan = '{ken}', Harga = '{harga}', DP = '{dp}', Sisa_kredit = '{sisa}', Tanggal = '{tanggal}' where  idtrans = '{label7.Text}'");
             bersih();
             tampildata();
         }
@@ -107,7 +114,7 @@ namespace Kredit_Kendaraan
         {
             int baris = e.RowIndex;
             int kolom = e.ColumnIndex;
-            if (kolom == 6)
+            if (kolom == 7)
             {
                 string idk = dataGridView1.Rows[baris].Cells[0].Value.ToString();
                 DB.crud($"Select *From transaksi WHERE idtrans = '{idk}'");
@@ -119,6 +126,7 @@ namespace Kredit_Kendaraan
                     string harga = "" + brs["Harga"];
                     string dp = "" + brs["DP"];
                     string sisa = "" + brs["Sisa_kredit"];
+                    string tanggal = "" + brs["Tanggal"];
 
                     label7.Text = idtr;
 
@@ -127,11 +135,12 @@ namespace Kredit_Kendaraan
                     txtharga.Text = harga;
                     txtdp.Text = dp;
                     txtsisa.Text = sisa;
+                    Date.Value = Convert.ToDateTime(tanggal);
 
 
                 }
             }
-            if (kolom == 7)
+            if (kolom == 8)
             {
                 string idt = dataGridView1.Rows[baris].Cells[0].Value.ToString();
                 DialogResult setuju = MessageBox.Show("Apakah mau Dihapus?" + idt, "Pemberitahuan", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -196,6 +205,11 @@ namespace Kredit_Kendaraan
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }
