@@ -25,12 +25,14 @@ namespace Kredit_Kendaraan
             this.btnDataMaster = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.pnlContent = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.pnlSidebar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSidebar
             // 
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(42)))), ((int)(((byte)(58)))));
+            this.pnlSidebar.Controls.Add(this.guna2Button1);
             this.pnlSidebar.Controls.Add(this.lblSidebarTitle);
             this.pnlSidebar.Controls.Add(this.lblSidebarSub);
             this.pnlSidebar.Controls.Add(this.pnlSidebarDivider);
@@ -103,8 +105,9 @@ namespace Kredit_Kendaraan
             this.btnKendaraan.Name = "btnKendaraan";
             this.btnKendaraan.Size = new System.Drawing.Size(220, 40);
             this.btnKendaraan.TabIndex = 2;
-            this.btnKendaraan.Text = "Data Kendaraan";
+            this.btnKendaraan.Text = "Cicilan kendaraan";
             this.btnKendaraan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnKendaraan.Click += new System.EventHandler(this.btnKendaraan_Click);
             // 
             // btnDataMaster
             // 
@@ -148,6 +151,23 @@ namespace Kredit_Kendaraan
             this.pnlContent.Size = new System.Drawing.Size(1704, 1170);
             this.pnlContent.TabIndex = 2;
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.BorderRadius = 8;
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
+            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(0, 230);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(220, 40);
+            this.guna2Button1.TabIndex = 100;
+            this.guna2Button1.Text = "Data Kendaraan";
+            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -176,5 +196,6 @@ namespace Kredit_Kendaraan
         private Guna.UI2.WinForms.Guna2Button btnDataMaster;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Panel  pnlContent;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

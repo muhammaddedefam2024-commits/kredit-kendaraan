@@ -18,4 +18,5 @@ C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit_K
 C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit_Kendaraan.FormDataMaster.resources
 C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit_Kendaraan.Form2.resources
 C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit_Kendaraan.Transaksi.resources
+C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit_Kendaraan.Cicilan.resources
 C:\Users\D0630\source\repos\Kredit Kendaraan\Kredit Kendaraan\obj\Debug\Kredit_Kendaraan.Kendaraan.resources

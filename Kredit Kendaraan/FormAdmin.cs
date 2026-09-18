@@ -54,5 +54,17 @@ namespace Kredit_Kendaraan
                 this.Hide();
             }
         }
+
+        private void btnKendaraan_Click(object sender, EventArgs e)
+        {
+            Transaksi Data = new Transaksi() { TopLevel = false, TopMost = true };
+            CKF.form(Data, pnlContent);
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Kendaraan Data = new Kendaraan() { TopLevel = false, TopMost = true };
+            CKF.form(Data, pnlContent);
+        }
     }
 }

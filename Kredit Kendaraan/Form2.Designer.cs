@@ -29,20 +29,12 @@ namespace Kredit_Kendaraan
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pnlTable = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTableTitle = new System.Windows.Forms.Label();
-            this.lblCardTagIcon = new System.Windows.Forms.Label();
-            this.lblCardTagTitle = new System.Windows.Forms.Label();
-            this.lblCardTagValue = new System.Windows.Forms.Label();
-            this.cardTagihan = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblCardNasIcon = new System.Windows.Forms.Label();
-            this.lblCardNasTitle = new System.Windows.Forms.Label();
-            this.lblCardNasValue = new System.Windows.Forms.Label();
-            this.cardNasabah = new Guna.UI2.WinForms.Guna2Panel();
             this.lblCardKreIcon = new System.Windows.Forms.Label();
             this.lblCardKreTitle = new System.Windows.Forms.Label();
             this.lblCardKreValue = new System.Windows.Forms.Label();
@@ -58,8 +50,6 @@ namespace Kredit_Kendaraan
             this.lblPageTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlTable.SuspendLayout();
-            this.cardTagihan.SuspendLayout();
-            this.cardNasabah.SuspendLayout();
             this.cardKredit.SuspendLayout();
             this.cardKendaraan.SuspendLayout();
             this.pnlContent.SuspendLayout();
@@ -70,32 +60,32 @@ namespace Kredit_Kendaraan
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.ColumnHeadersHeight = 38;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.dataGridView1.Location = new System.Drawing.Point(16, 50);
@@ -131,98 +121,6 @@ namespace Kredit_Kendaraan
             this.lblTableTitle.Size = new System.Drawing.Size(400, 26);
             this.lblTableTitle.TabIndex = 0;
             this.lblTableTitle.Text = "Data Terbaru";
-            // 
-            // lblCardTagIcon
-            // 
-            this.lblCardTagIcon.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.lblCardTagIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(88)))), ((int)(((byte)(12)))));
-            this.lblCardTagIcon.Location = new System.Drawing.Point(332, 16);
-            this.lblCardTagIcon.Name = "lblCardTagIcon";
-            this.lblCardTagIcon.Size = new System.Drawing.Size(36, 36);
-            this.lblCardTagIcon.TabIndex = 0;
-            this.lblCardTagIcon.Text = "■";
-            this.lblCardTagIcon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblCardTagTitle
-            // 
-            this.lblCardTagTitle.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.lblCardTagTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
-            this.lblCardTagTitle.Location = new System.Drawing.Point(14, 14);
-            this.lblCardTagTitle.Name = "lblCardTagTitle";
-            this.lblCardTagTitle.Size = new System.Drawing.Size(300, 18);
-            this.lblCardTagTitle.TabIndex = 1;
-            this.lblCardTagTitle.Text = "Total Tagihan";
-            // 
-            // lblCardTagValue
-            // 
-            this.lblCardTagValue.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
-            this.lblCardTagValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.lblCardTagValue.Location = new System.Drawing.Point(12, 36);
-            this.lblCardTagValue.Name = "lblCardTagValue";
-            this.lblCardTagValue.Size = new System.Drawing.Size(310, 52);
-            this.lblCardTagValue.TabIndex = 2;
-            this.lblCardTagValue.Text = "Rp 0";
-            // 
-            // cardTagihan
-            // 
-            this.cardTagihan.BackColor = System.Drawing.Color.Transparent;
-            this.cardTagihan.BorderRadius = 12;
-            this.cardTagihan.Controls.Add(this.lblCardTagIcon);
-            this.cardTagihan.Controls.Add(this.lblCardTagTitle);
-            this.cardTagihan.Controls.Add(this.lblCardTagValue);
-            this.cardTagihan.Location = new System.Drawing.Point(1224, 20);
-            this.cardTagihan.Name = "cardTagihan";
-            this.cardTagihan.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cardTagihan.ShadowDecoration.Depth = 10;
-            this.cardTagihan.ShadowDecoration.Enabled = true;
-            this.cardTagihan.Size = new System.Drawing.Size(380, 100);
-            this.cardTagihan.TabIndex = 3;
-            // 
-            // lblCardNasIcon
-            // 
-            this.lblCardNasIcon.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.lblCardNasIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(58)))), ((int)(((byte)(237)))));
-            this.lblCardNasIcon.Location = new System.Drawing.Point(332, 16);
-            this.lblCardNasIcon.Name = "lblCardNasIcon";
-            this.lblCardNasIcon.Size = new System.Drawing.Size(36, 36);
-            this.lblCardNasIcon.TabIndex = 0;
-            this.lblCardNasIcon.Text = "■";
-            this.lblCardNasIcon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblCardNasTitle
-            // 
-            this.lblCardNasTitle.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.lblCardNasTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
-            this.lblCardNasTitle.Location = new System.Drawing.Point(14, 14);
-            this.lblCardNasTitle.Name = "lblCardNasTitle";
-            this.lblCardNasTitle.Size = new System.Drawing.Size(300, 18);
-            this.lblCardNasTitle.TabIndex = 1;
-            this.lblCardNasTitle.Text = "Total Nasabah";
-            // 
-            // lblCardNasValue
-            // 
-            this.lblCardNasValue.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
-            this.lblCardNasValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.lblCardNasValue.Location = new System.Drawing.Point(12, 36);
-            this.lblCardNasValue.Name = "lblCardNasValue";
-            this.lblCardNasValue.Size = new System.Drawing.Size(310, 52);
-            this.lblCardNasValue.TabIndex = 2;
-            this.lblCardNasValue.Text = "0";
-            // 
-            // cardNasabah
-            // 
-            this.cardNasabah.BackColor = System.Drawing.Color.Transparent;
-            this.cardNasabah.BorderRadius = 12;
-            this.cardNasabah.Controls.Add(this.lblCardNasIcon);
-            this.cardNasabah.Controls.Add(this.lblCardNasTitle);
-            this.cardNasabah.Controls.Add(this.lblCardNasValue);
-            this.cardNasabah.Location = new System.Drawing.Point(824, 20);
-            this.cardNasabah.Name = "cardNasabah";
-            this.cardNasabah.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cardNasabah.ShadowDecoration.Depth = 10;
-            this.cardNasabah.ShadowDecoration.Enabled = true;
-            this.cardNasabah.Size = new System.Drawing.Size(380, 100);
-            this.cardNasabah.TabIndex = 2;
             // 
             // lblCardKreIcon
             // 
@@ -315,19 +213,18 @@ namespace Kredit_Kendaraan
             this.lblCardKenValue.Size = new System.Drawing.Size(310, 52);
             this.lblCardKenValue.TabIndex = 2;
             this.lblCardKenValue.Text = "0";
+            this.lblCardKenValue.Click += new System.EventHandler(this.lblCardKenValue_Click);
             // 
             // pnlContent
             // 
             this.pnlContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
             this.pnlContent.Controls.Add(this.cardKendaraan);
             this.pnlContent.Controls.Add(this.cardKredit);
-            this.pnlContent.Controls.Add(this.cardNasabah);
-            this.pnlContent.Controls.Add(this.cardTagihan);
             this.pnlContent.Controls.Add(this.pnlTable);
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(0, 60);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(1704, 1110);
+            this.pnlContent.Size = new System.Drawing.Size(1924, 1110);
             this.pnlContent.TabIndex = 5;
             // 
             // pnlHeaderDivider
@@ -336,16 +233,15 @@ namespace Kredit_Kendaraan
             this.pnlHeaderDivider.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlHeaderDivider.Location = new System.Drawing.Point(0, 59);
             this.pnlHeaderDivider.Name = "pnlHeaderDivider";
-            this.pnlHeaderDivider.Size = new System.Drawing.Size(1704, 1);
+            this.pnlHeaderDivider.Size = new System.Drawing.Size(1924, 1);
             this.pnlHeaderDivider.TabIndex = 99;
             // 
             // lblHeaderInfo
             // 
-            this.lblHeaderInfo.AutoSize = false;
+            this.lblHeaderInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHeaderInfo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblHeaderInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
-            this.lblHeaderInfo.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            this.lblHeaderInfo.Location = new System.Drawing.Point(1330, 18);
+            this.lblHeaderInfo.Location = new System.Drawing.Point(1550, 18);
             this.lblHeaderInfo.Name = "lblHeaderInfo";
             this.lblHeaderInfo.Size = new System.Drawing.Size(354, 24);
             this.lblHeaderInfo.TabIndex = 1;
@@ -361,12 +257,11 @@ namespace Kredit_Kendaraan
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1704, 60);
+            this.pnlHeader.Size = new System.Drawing.Size(1924, 60);
             this.pnlHeader.TabIndex = 4;
             // 
             // lblPageTitle
             // 
-            this.lblPageTitle.AutoSize = false;
             this.lblPageTitle.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.lblPageTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.lblPageTitle.Location = new System.Drawing.Point(20, 14);
@@ -386,8 +281,6 @@ namespace Kredit_Kendaraan
             this.Text = "Dashboard";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlTable.ResumeLayout(false);
-            this.cardTagihan.ResumeLayout(false);
-            this.cardNasabah.ResumeLayout(false);
             this.cardKredit.ResumeLayout(false);
             this.cardKendaraan.ResumeLayout(false);
             this.pnlContent.ResumeLayout(false);
@@ -401,14 +294,6 @@ namespace Kredit_Kendaraan
         private System.Windows.Forms.DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2Panel pnlTable;
         private System.Windows.Forms.Label lblTableTitle;
-        private System.Windows.Forms.Label lblCardTagIcon;
-        private System.Windows.Forms.Label lblCardTagTitle;
-        private System.Windows.Forms.Label lblCardTagValue;
-        private Guna.UI2.WinForms.Guna2Panel cardTagihan;
-        private System.Windows.Forms.Label lblCardNasIcon;
-        private System.Windows.Forms.Label lblCardNasTitle;
-        private System.Windows.Forms.Label lblCardNasValue;
-        private Guna.UI2.WinForms.Guna2Panel cardNasabah;
         private System.Windows.Forms.Label lblCardKreIcon;
         private System.Windows.Forms.Label lblCardKreTitle;
         private System.Windows.Forms.Label lblCardKreValue;

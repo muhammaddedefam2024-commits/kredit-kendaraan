@@ -16,5 +16,10 @@ namespace Kredit_Kendaraan
         {
             InitializeComponent();
         }
+
+        private void lblCardKenValue_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

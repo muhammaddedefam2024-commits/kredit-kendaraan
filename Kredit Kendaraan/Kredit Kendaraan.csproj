@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cicilan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cicilan.Designer.cs">
+      <DependentUpon>Cicilan.cs</DependentUpon>
+    </Compile>
     <Compile Include="CKF.cs" />
     <Compile Include="DB.cs" />
     <Compile Include="Form1.cs">
@@ -99,6 +105,9 @@
     <Compile Include="Transaksi.Designer.cs">
       <DependentUpon>Transaksi.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Cicilan.resx">
+      <DependentUpon>Cicilan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

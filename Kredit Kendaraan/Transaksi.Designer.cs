@@ -45,9 +45,9 @@ namespace Kredit_Kendaraan
             this.txtken = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtnama = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtsisa = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtnama = new Guna.UI2.WinForms.Guna2TextBox();
             this.IDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pelanggan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kendaraan = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -142,6 +142,7 @@ namespace Kredit_Kendaraan
             this.textBox1.SelectedText = "";
             this.textBox1.Size = new System.Drawing.Size(286, 60);
             this.textBox1.TabIndex = 39;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label9
             // 
@@ -152,6 +153,7 @@ namespace Kredit_Kendaraan
             this.label9.Size = new System.Drawing.Size(58, 20);
             this.label9.TabIndex = 38;
             this.label9.Text = "Harga";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -184,6 +186,7 @@ namespace Kredit_Kendaraan
             this.label6.Size = new System.Drawing.Size(94, 20);
             this.label6.TabIndex = 35;
             this.label6.Text = "Pelanggan";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // guna2Panel1
             // 
@@ -194,6 +197,7 @@ namespace Kredit_Kendaraan
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1924, 375);
             this.guna2Panel1.TabIndex = 34;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // dataGridView1
             // 
@@ -238,6 +242,7 @@ namespace Kredit_Kendaraan
             this.txtdp.SelectedText = "";
             this.txtdp.Size = new System.Drawing.Size(286, 60);
             this.txtdp.TabIndex = 33;
+            this.txtdp.TextChanged += new System.EventHandler(this.txtdp_TextChanged);
             // 
             // txtharga
             // 
@@ -261,6 +266,7 @@ namespace Kredit_Kendaraan
             this.txtharga.SelectedText = "";
             this.txtharga.Size = new System.Drawing.Size(286, 60);
             this.txtharga.TabIndex = 32;
+            this.txtharga.TextChanged += new System.EventHandler(this.txtharga_TextChanged);
             // 
             // txtken
             // 
@@ -294,6 +300,7 @@ namespace Kredit_Kendaraan
             this.label7.Size = new System.Drawing.Size(51, 20);
             this.label7.TabIndex = 27;
             this.label7.Text = "label7";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // panel2
             // 
@@ -320,30 +327,7 @@ namespace Kredit_Kendaraan
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1924, 1170);
             this.panel2.TabIndex = 11;
-            // 
-            // txtnama
-            // 
-            this.txtnama.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.txtnama.BorderRadius = 10;
-            this.txtnama.BorderThickness = 3;
-            this.txtnama.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtnama.DefaultText = "";
-            this.txtnama.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtnama.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtnama.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtnama.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtnama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtnama.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtnama.ForeColor = System.Drawing.Color.Black;
-            this.txtnama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtnama.Location = new System.Drawing.Point(251, 66);
-            this.txtnama.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtnama.Name = "txtnama";
-            this.txtnama.PlaceholderText = "Masukkan Nama";
-            this.txtnama.SelectedText = "";
-            this.txtnama.Size = new System.Drawing.Size(286, 60);
-            this.txtnama.TabIndex = 30;
-            this.txtnama.TextChanged += new System.EventHandler(this.txtnama_TextChanged);
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label2
             // 
@@ -354,6 +338,7 @@ namespace Kredit_Kendaraan
             this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 44;
             this.label2.Text = "Sisa Kredit";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtsisa
             // 
@@ -378,6 +363,30 @@ namespace Kredit_Kendaraan
             this.txtsisa.Size = new System.Drawing.Size(286, 60);
             this.txtsisa.TabIndex = 43;
             this.txtsisa.TextChanged += new System.EventHandler(this.txtsisa_TextChanged);
+            // 
+            // txtnama
+            // 
+            this.txtnama.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.txtnama.BorderRadius = 10;
+            this.txtnama.BorderThickness = 3;
+            this.txtnama.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtnama.DefaultText = "";
+            this.txtnama.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtnama.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtnama.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtnama.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtnama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtnama.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtnama.ForeColor = System.Drawing.Color.Black;
+            this.txtnama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtnama.Location = new System.Drawing.Point(251, 66);
+            this.txtnama.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtnama.Name = "txtnama";
+            this.txtnama.PlaceholderText = "Masukkan Nama";
+            this.txtnama.SelectedText = "";
+            this.txtnama.Size = new System.Drawing.Size(286, 60);
+            this.txtnama.TabIndex = 30;
+            this.txtnama.TextChanged += new System.EventHandler(this.txtnama_TextChanged);
             // 
             // IDT
             // 
@@ -424,6 +433,8 @@ namespace Kredit_Kendaraan
             // Edit
             // 
             this.Edit.HeaderText = "";
+            this.Edit.Image = ((System.Drawing.Image)(resources.GetObject("Edit.Image")));
+            this.Edit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Edit.MinimumWidth = 8;
             this.Edit.Name = "Edit";
             this.Edit.Width = 150;
@@ -431,6 +442,8 @@ namespace Kredit_Kendaraan
             // Hapus
             // 
             this.Hapus.HeaderText = "";
+            this.Hapus.Image = ((System.Drawing.Image)(resources.GetObject("Hapus.Image")));
+            this.Hapus.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Hapus.MinimumWidth = 8;
             this.Hapus.Name = "Hapus";
             this.Hapus.Width = 150;

@@ -35,14 +35,12 @@ namespace Kredit_Kendaraan
 
         private void btnKreditSaya_Click(object sender, EventArgs e)
         {
-            Transaksi Data = new Transaksi() { TopLevel = false, TopMost = true };
+            Cicilan Data = new Cicilan() { TopLevel = false, TopMost = true };
             CKF.form(Data, pnlContent);
         }
 
         private void btnRiwayat_Click(object sender, EventArgs e)
         {
-            Kendaraan Data = new Kendaraan() { TopLevel = false, TopMost = true };
-            CKF.form(Data, pnlContent);
         }
     }
 }

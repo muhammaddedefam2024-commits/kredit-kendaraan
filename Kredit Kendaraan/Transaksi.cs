@@ -113,7 +113,7 @@ namespace Kredit_Kendaraan
                 DB.crud($"Select *From transaksi WHERE idtrans = '{idk}'");
                 foreach (DataRow brs in DB.ds.Tables[0].Rows)
                 {
-                    string idtr = "" + brs["idtans"];
+                    string idtr = "" + brs["idtrans"];
                     string nama = "" + brs["Pelanggan"];
                     string ken = "" + brs["Kendaraan"];
                     string harga = "" + brs["Harga"];
@@ -142,6 +142,62 @@ namespace Kredit_Kendaraan
 
                 tampildata();
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            DB.crud($"Select * From transaksi where Pelanggan like '%{textBox1.Text}%'");
+            foreach (DataRow baris in DB.ds.Tables[0].Rows)
+            {
+                string idt = "" + baris["idtrans"];
+                string nama = "" + baris["Pelanggan"];
+                string ken = "" + baris["Kendaraan"];
+                string harga = "" + baris["Harga"];
+                string dp = "" + baris["DP"];
+                string sisa = "" + baris["Sisa_kredit"];
+                dataGridView1.Rows.Add(idt, nama, ken, harga, dp, sisa);
+            }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtdp_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtharga_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
