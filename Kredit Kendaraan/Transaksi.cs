@@ -32,7 +32,7 @@ namespace Kredit_Kendaraan
             {
                 string idt = "" + baris["idtrans"];
                 string nama = "" + baris["Pelanggan"];
-                string ken = "" + baris["Kendaraan"];
+                string ken = "" + baris["ID_Kendaraan"];
                 string harga = "" + baris["Harga"];
                 string dp = "" + baris["DP"];
                 string sisa = "" + baris["Sisa_kredit"];
@@ -105,7 +105,7 @@ namespace Kredit_Kendaraan
             string sisa = txtsisa.Text;
             string tanggal = Date.Value.ToString("yyyy-MM-dd");
 
-            DB.crud($"update transaksi Set Pelanggan = '{na}', Kendaraan = '{ken}', Harga = '{harga}', DP = '{dp}', Sisa_kredit = '{sisa}', Tanggal = '{tanggal}' where  idtrans = '{label7.Text}'");
+            DB.crud($"update transaksi Set Pelanggan = '{na}', ID_Kendaraan = '{ken}', Harga = '{harga}', DP = '{dp}', Sisa_kredit = '{sisa}', Tanggal = '{tanggal}' where  idtrans = '{label7.Text}'");
             bersih();
             tampildata();
         }
@@ -122,7 +122,7 @@ namespace Kredit_Kendaraan
                 {
                     string idtr = "" + brs["idtrans"];
                     string nama = "" + brs["Pelanggan"];
-                    string ken = "" + brs["Kendaraan"];
+                    string ken = "" + brs["ID_Kendaraan"];
                     string harga = "" + brs["Harga"];
                     string dp = "" + brs["DP"];
                     string sisa = "" + brs["Sisa_kredit"];
