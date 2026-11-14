@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI2, Version=2.0.4.8, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.8\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
@@ -42,6 +46,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,6 +66,24 @@
     </Compile>
     <Compile Include="CKF.cs" />
     <Compile Include="DB.cs" />
+    <Compile Include="DashboardUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashboardUser.Designer.cs">
+      <DependentUpon>DashboardUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListKendaraanUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListKendaraanUser.Designer.cs">
+      <DependentUpon>ListKendaraanUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCR.Designer.cs">
+      <DependentUpon>FCR.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +130,15 @@
     </Compile>
     <EmbeddedResource Include="Cicilan.resx">
       <DependentUpon>Cicilan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardUser.resx">
+      <DependentUpon>DashboardUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListKendaraanUser.resx">
+      <DependentUpon>ListKendaraanUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCR.resx">
+      <DependentUpon>FCR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

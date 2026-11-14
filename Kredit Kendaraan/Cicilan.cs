@@ -18,19 +18,31 @@ namespace Kredit_Kendaraan
             InitializeComponent();
         }
 
+        private void Cicilan_Load(object sender, EventArgs e)
+        {
+            tampildata();
+        }
+
         public void tampildata()
         {
             dataGridView1.Rows.Clear();
-            DB.crud("select * from transaksi");
+            // Jika user biasa, filter berdasarkan nama login; Admin tampil semua
+            string query = (DB.RoleName == "Admin")
+                ? "SELECT * FROM transaksi"
+                : $"SELECT * FROM transaksi WHERE Pelanggan LIKE '%{DB.NamaUser}%'";
+            DB.crud(query);
             foreach (DataRow baris in DB.ds.Tables[0].Rows)
             {
-                string idt = "" + baris["idtrans"];
-                string nama = "" + baris["Pelanggan"];
-                string ken = "" + baris["Kendaraan"];
+                string idt   = "" + baris["idtrans"];
+                string nama  = "" + baris["Pelanggan"];
+                string ken   = "" + baris["Kendaraan"];
                 string harga = "" + baris["Harga"];
-                string dp = "" + baris["DP"];
-                string sisa = "" + baris["Sisa_kredit"];
-                string tgl = "" + baris["Tanggal"];
+                string dp    = "" + baris["DP"];
+                string sisa  = "" + baris["Sisa_kredit"];
+                // handle NULL Tanggal
+                string tgl   = (baris["Tanggal"] == DBNull.Value)
+                               ? "-"
+                               : Convert.ToDateTime(baris["Tanggal"]).ToString("dd/MM/yyyy");
 
                 dataGridView1.Rows.Add(idt, nama, ken, harga, dp, sisa, tgl);
             }
@@ -49,16 +61,18 @@ namespace Kredit_Kendaraan
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            DB.crud($"Select * From transaksi where Pelanggan like '%{textBox1.Text}%'");
+            DB.crud($"SELECT * FROM transaksi WHERE Pelanggan LIKE '%{textBox1.Text}%'");
             foreach (DataRow baris in DB.ds.Tables[0].Rows)
             {
-                string idt = "" + baris["idtrans"];
-                string nama = "" + baris["Pelanggan"];
-                string ken = "" + baris["Kendaraan"];
+                string idt   = "" + baris["idtrans"];
+                string nama  = "" + baris["Pelanggan"];
+                string ken   = "" + baris["Kendaraan"];
                 string harga = "" + baris["Harga"];
-                string dp = "" + baris["DP"];
-                string sisa = "" + baris["Sisa_kredit"];
-                string tgl = "" + baris["Tanggal"];
+                string dp    = "" + baris["DP"];
+                string sisa  = "" + baris["Sisa_kredit"];
+                string tgl   = (baris["Tanggal"] == DBNull.Value)
+                               ? "-"
+                               : Convert.ToDateTime(baris["Tanggal"]).ToString("dd/MM/yyyy");
 
                 dataGridView1.Rows.Add(idt, nama, ken, harga, dp, sisa, tgl);
             }

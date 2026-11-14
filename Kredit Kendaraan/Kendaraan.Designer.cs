@@ -165,6 +165,7 @@ namespace Kredit_Kendaraan
             this.button1.Size = new System.Drawing.Size(201, 79);
             this.button1.TabIndex = 42;
             this.button1.Text = "Update";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnSimpan
             // 
@@ -228,6 +229,7 @@ namespace Kredit_Kendaraan
             this.textBox1.SelectedText = "";
             this.textBox1.Size = new System.Drawing.Size(286, 60);
             this.textBox1.TabIndex = 39;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label9
             // 
@@ -299,6 +301,7 @@ namespace Kredit_Kendaraan
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(1924, 375);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txtwarna
             // 
@@ -487,6 +490,7 @@ namespace Kredit_Kendaraan
             this.Controls.Add(this.panel2);
             this.Name = "Kendaraan";
             this.Text = "Kendaraan";
+            this.Load += new System.EventHandler(this.Kendaraan_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);

@@ -16,6 +16,10 @@ namespace Kredit_Kendaraan
         public static MySqlDataAdapter da;
         public static MySqlCommand perintah;
 
+        // Session — diisi saat login berhasil
+        public static string NamaUser = "";
+        public static string RoleName = "";
+
         public static void crud(string query)
         {
             Console.WriteLine(query);

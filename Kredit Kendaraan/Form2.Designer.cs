@@ -97,6 +97,15 @@ namespace Kredit_Kendaraan
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1620, 886);
             this.dataGridView1.TabIndex = 1;
+            // Kolom tabel data terbaru
+            System.Windows.Forms.DataGridViewTextBoxColumn dgvCol0 = new System.Windows.Forms.DataGridViewTextBoxColumn(); dgvCol0.HeaderText = "ID";          dgvCol0.Name = "colID";    dgvCol0.Width = 60;
+            System.Windows.Forms.DataGridViewTextBoxColumn dgvCol1 = new System.Windows.Forms.DataGridViewTextBoxColumn(); dgvCol1.HeaderText = "Pelanggan";   dgvCol1.Name = "colNama";  dgvCol1.Width = 200;
+            System.Windows.Forms.DataGridViewTextBoxColumn dgvCol2 = new System.Windows.Forms.DataGridViewTextBoxColumn(); dgvCol2.HeaderText = "Kendaraan";   dgvCol2.Name = "colKen";   dgvCol2.Width = 200;
+            System.Windows.Forms.DataGridViewTextBoxColumn dgvCol3 = new System.Windows.Forms.DataGridViewTextBoxColumn(); dgvCol3.HeaderText = "Harga";       dgvCol3.Name = "colHarga"; dgvCol3.Width = 150;
+            System.Windows.Forms.DataGridViewTextBoxColumn dgvCol4 = new System.Windows.Forms.DataGridViewTextBoxColumn(); dgvCol4.HeaderText = "DP";          dgvCol4.Name = "colDP";    dgvCol4.Width = 150;
+            System.Windows.Forms.DataGridViewTextBoxColumn dgvCol5 = new System.Windows.Forms.DataGridViewTextBoxColumn(); dgvCol5.HeaderText = "Sisa Kredit"; dgvCol5.Name = "colSisa";  dgvCol5.Width = 150;
+            System.Windows.Forms.DataGridViewTextBoxColumn dgvCol6 = new System.Windows.Forms.DataGridViewTextBoxColumn(); dgvCol6.HeaderText = "Tanggal";     dgvCol6.Name = "colTgl";   dgvCol6.Width = 120;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dgvCol0, dgvCol1, dgvCol2, dgvCol3, dgvCol4, dgvCol5, dgvCol6 });
             // 
             // pnlTable
             // 
@@ -279,6 +288,7 @@ namespace Kredit_Kendaraan
             this.Controls.Add(this.pnlHeader);
             this.Name = "Form2";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlTable.ResumeLayout(false);
             this.cardKredit.ResumeLayout(false);

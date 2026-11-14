@@ -24,13 +24,15 @@ namespace Kredit_Kendaraan
         public void tampildata()
         {
             DataMaster.Rows.Clear();
-            DB.crud($"select * from user");
+            // fix: JOIN ke role untuk tampilkan nama role bukan id_role
+            DB.crud("SELECT u.ID_user, u.Nama_Lengkap, u.ussername, r.role_name" +
+                    " FROM user u LEFT JOIN role r ON u.id_role = r.id_role");
             foreach (DataRow brs in DB.ds.Tables[0].Rows) 
             {
-                string idp = "" + brs["ID_user"];
-                string nm = "" + brs["Nama_Lengkap"];
-                string usn = "" + brs["ussername"];
-                string role = "" + brs ["id_role"];
+                string idp  = "" + brs["ID_user"];
+                string nm   = "" + brs["Nama_Lengkap"];
+                string usn  = "" + brs["ussername"];
+                string role = "" + brs["role_name"];   // fix: tampil nama role
 
                 DataMaster.Rows.Add(idp, nm, usn, role);
             }
@@ -50,20 +52,27 @@ namespace Kredit_Kendaraan
 
         private void btnSimpanUser_Click_1(object sender, EventArgs e)
         {
-            if (txtUsername.Text != "" || txtNama.Text != "" || txtPassword.Text != "" || cmbRole.Text != "")
+            // fix: && bukan || — validasi cek semua field kosong
+            if (txtUsername.Text == "" || txtNama.Text == "" || txtPassword.Text == "" || cmbRole.Text == "")
             {
-                string nm = txtNama.Text;
-                string user = txtUsername.Text;
-                string pass = txtPassword.Text;
-                string role = cmbRole.Text;
-
-                DB.crud($"insert into user values (null, '{nm}', '{user}', '{pass}', '{role}')");
-                tampildata();
-                bersih();
+                MessageBox.Show("Lengkapi Data !");
             }
             else
             {
-                MessageBox.Show("Lengkapi Data !");
+                string nm   = txtNama.Text;
+                string user = txtUsername.Text;
+                string pass = txtPassword.Text;
+
+                // fix: cari id_role berdasarkan nama role yang dipilih
+                DB.crud($"SELECT id_role FROM role WHERE role_name='{cmbRole.Text}'");
+                string idRole = (DB.ds.Tables[0].Rows.Count > 0)
+                                ? ("" + DB.ds.Tables[0].Rows[0]["id_role"])
+                                : "2";  // default User jika tidak ditemukan
+
+                DB.crud($"INSERT INTO user (Nama_Lengkap, ussername, password, id_role)" +
+                        $" VALUES ('{nm}', '{user}', '{pass}', '{idRole}')");
+                tampildata();
+                bersih();
             }
         }
 
@@ -95,19 +104,21 @@ namespace Kredit_Kendaraan
             if (kolom == 4)
             {
                 string idbar = DataMaster.Rows[baris].Cells[0].Value.ToString();
-                DB.crud($"Select * from user where ID_user = '{idbar}'");
+                DB.crud($"SELECT u.*, r.role_name FROM user u" +
+                        $" LEFT JOIN role r ON u.id_role = r.id_role" +
+                        $" WHERE u.ID_user='{idbar}'");
                 foreach(DataRow brs in DB.ds.Tables[0].Rows)
                 {
-                    string idr = "" + brs ["ID_user"];
+                    string idr  = "" + brs["ID_user"];
                     string nama = "" + brs["Nama_Lengkap"];
                     string user = "" + brs["ussername"];
                     string Pass = "" + brs["password"];
-                    string role = "" + brs["id_role"];
-                    label1.Text = idr;
-                    txtNama.Text = nama;
+                    string role = "" + brs["role_name"];  // fix: tampil role_name
+                    label1.Text      = idr;
+                    txtNama.Text     = nama;
                     txtUsername.Text = user;
                     txtPassword.Text = Pass;
-                    cmbRole.Text = role;
+                    cmbRole.Text     = role;
                 }
             }
             if (kolom == 5)
@@ -130,12 +141,19 @@ namespace Kredit_Kendaraan
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            string na = txtNama.Text;
-            String user = txtUsername.Text;
-            String pass = txtPassword.Text;
-            String rl = "" + cmbRole.SelectedItem;
+            string na   = txtNama.Text;
+            string user = txtUsername.Text;
+            string pass = txtPassword.Text;
 
-            DB.crud($"update user Set Nama_Lengkap = '{na}', ussername = '{user}', password = '{pass}', id_role = '{rl}' where  id_user = '{label1.Text}'");
+            // fix: cari id_role dari nama role yang dipilih di combobox
+            DB.crud($"SELECT id_role FROM role WHERE role_name='{cmbRole.Text}'");
+            string idRole = (DB.ds.Tables[0].Rows.Count > 0)
+                            ? ("" + DB.ds.Tables[0].Rows[0]["id_role"])
+                            : cmbRole.Text;
+
+            DB.crud($"UPDATE user SET Nama_Lengkap='{na}', ussername='{user}'," +
+                    $" password='{pass}', id_role='{idRole}'" +
+                    $" WHERE ID_user='{label1.Text}'");
             bersih();
             tampildata();
         }
@@ -163,10 +181,11 @@ namespace Kredit_Kendaraan
         private void cmbRole_DropDown(object sender, EventArgs e)
         {
             cmbRole.Items.Clear();
-            DB.crud($"SELECT * FROM role ");
+            DB.crud("SELECT * FROM role");
             foreach (DataRow baris in DB.ds.Tables[0].Rows)
             {
-                string roleName = "" + baris["id_role"];
+                // fix: tampilkan role_name bukan id_role
+                string roleName = "" + baris["role_name"];
                 cmbRole.Items.Add(roleName);
             }
         }

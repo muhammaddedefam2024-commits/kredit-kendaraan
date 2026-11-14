@@ -26,6 +26,10 @@ namespace Kredit_Kendaraan
                 DataRow baris = DB.ds.Tables[0].Rows[0];
                 string role = "" + baris["role_name"];
 
+                // Simpan session user yang login
+                DB.NamaUser = "" + baris["Nama_Lengkap"];
+                DB.RoleName = role;
+
                 if (role == "Admin")
                 {
                     FormAdmin FA = new FormAdmin();

@@ -35,6 +35,7 @@ namespace Kredit_Kendaraan
             this.guna2Panel3.Controls.Add(this.pnlSidebarDivider);
             this.guna2Panel3.Controls.Add(this.btnKreditSaya);
             this.guna2Panel3.Controls.Add(this.btnRiwayat);
+            this.guna2Panel3.Controls.Add(this.btnLihatKendaraan);
             this.guna2Panel3.Controls.Add(this.btnLogout);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
@@ -104,6 +105,23 @@ namespace Kredit_Kendaraan
             this.btnRiwayat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnRiwayat.Click += new System.EventHandler(this.btnRiwayat_Click);
             // 
+            // btnLihatKendaraan
+            // 
+            this.btnLihatKendaraan = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLihatKendaraan.BorderRadius = 8;
+            this.btnLihatKendaraan.FillColor = System.Drawing.Color.Transparent;
+            this.btnLihatKendaraan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLihatKendaraan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.btnLihatKendaraan.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
+            this.btnLihatKendaraan.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnLihatKendaraan.Location = new System.Drawing.Point(0, 199);
+            this.btnLihatKendaraan.Name = "btnLihatKendaraan";
+            this.btnLihatKendaraan.Size = new System.Drawing.Size(220, 40);
+            this.btnLihatKendaraan.TabIndex = 5;
+            this.btnLihatKendaraan.Text = "   Lihat Kendaraan";
+            this.btnLihatKendaraan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLihatKendaraan.Click += new System.EventHandler(this.btnLihatKendaraan_Click);
+            // 
             // btnLogout
             // 
             this.btnLogout.BorderRadius = 8;
@@ -141,6 +159,7 @@ namespace Kredit_Kendaraan
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kredit Kendaraan — User";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Fuser_Load);
             this.guna2Panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -154,6 +173,7 @@ namespace Kredit_Kendaraan
         private System.Windows.Forms.Panel    pnlSidebarDivider;
         private Guna.UI2.WinForms.Guna2Button btnKreditSaya;
         private Guna.UI2.WinForms.Guna2Button btnRiwayat;
+        private Guna.UI2.WinForms.Guna2Button btnLihatKendaraan;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Panel  pnlContent;
     }

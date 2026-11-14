@@ -17,6 +17,7 @@ namespace Kredit_Kendaraan
         private void InitializeComponent()
         {
             this.pnlSidebar = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.lblSidebarTitle = new System.Windows.Forms.Label();
             this.lblSidebarSub = new System.Windows.Forms.Label();
             this.pnlSidebarDivider = new System.Windows.Forms.Panel();
@@ -25,13 +26,14 @@ namespace Kredit_Kendaraan
             this.btnDataMaster = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.pnlContent = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.pnlSidebar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSidebar
             // 
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(42)))), ((int)(((byte)(58)))));
+            this.pnlSidebar.Controls.Add(this.guna2Button2);
             this.pnlSidebar.Controls.Add(this.guna2Button1);
             this.pnlSidebar.Controls.Add(this.lblSidebarTitle);
             this.pnlSidebar.Controls.Add(this.lblSidebarSub);
@@ -45,6 +47,23 @@ namespace Kredit_Kendaraan
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Size = new System.Drawing.Size(220, 1170);
             this.pnlSidebar.TabIndex = 0;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.BorderRadius = 8;
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
+            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(0, 230);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(220, 40);
+            this.guna2Button1.TabIndex = 100;
+            this.guna2Button1.Text = "Data Kendaraan";
+            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // lblSidebarTitle
             // 
@@ -151,22 +170,22 @@ namespace Kredit_Kendaraan
             this.pnlContent.Size = new System.Drawing.Size(1704, 1170);
             this.pnlContent.TabIndex = 2;
             // 
-            // guna2Button1
+            // guna2Button2
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BorderRadius = 8;
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
-            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(0, 230);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(220, 40);
-            this.guna2Button1.TabIndex = 100;
-            this.guna2Button1.Text = "Data Kendaraan";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.guna2Button2.Animated = true;
+            this.guna2Button2.BorderRadius = 8;
+            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
+            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(3, 276);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(220, 40);
+            this.guna2Button2.TabIndex = 101;
+            this.guna2Button2.Text = "Data Kendaraan";
+            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // FormAdmin
             // 
@@ -180,6 +199,7 @@ namespace Kredit_Kendaraan
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kredit Kendaraan — Admin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormAdmin_Load);
             this.pnlSidebar.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -197,5 +217,6 @@ namespace Kredit_Kendaraan
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Panel  pnlContent;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }

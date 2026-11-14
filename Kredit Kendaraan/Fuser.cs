@@ -17,9 +17,17 @@ namespace Kredit_Kendaraan
             InitializeComponent();
         }
 
+        private void Fuser_Load(object sender, EventArgs e)
+        {
+            // Tampilkan nama user di subtitle sidebar
+            lblSidebarSub.Text = "Halo, " + DB.NamaUser;
+            // Otomatis buka dashboard user
+            DashboardUser dash = new DashboardUser() { TopLevel = false, TopMost = true };
+            CKF.form(dash, pnlContent);
+        }
+
         private void guna2Panel3_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -27,6 +35,8 @@ namespace Kredit_Kendaraan
             DialogResult setuju = MessageBox.Show("Apakah mau keluar?", "Pemberitahuan", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (setuju == DialogResult.Yes)
             {
+                DB.NamaUser = "";
+                DB.RoleName = "";
                 Form1 F1 = new Form1();
                 F1.Visible = true;
                 this.Hide();
@@ -41,6 +51,15 @@ namespace Kredit_Kendaraan
 
         private void btnRiwayat_Click(object sender, EventArgs e)
         {
+            // Fix: buka DashboardUser untuk melihat riwayat cicilan
+            DashboardUser Data = new DashboardUser() { TopLevel = false, TopMost = true };
+            CKF.form(Data, pnlContent);
+        }
+
+        private void btnLihatKendaraan_Click(object sender, EventArgs e)
+        {
+            ListKendaraanUser Data = new ListKendaraanUser() { TopLevel = false, TopMost = true };
+            CKF.form(Data, pnlContent);
         }
     }
 }

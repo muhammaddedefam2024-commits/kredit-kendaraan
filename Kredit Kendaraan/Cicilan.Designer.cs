@@ -192,6 +192,7 @@ namespace Kredit_Kendaraan
             this.Controls.Add(this.panel2);
             this.Name = "Cicilan";
             this.Text = "Cicilan";
+            this.Load += new System.EventHandler(this.Cicilan_Load);
             this.panel2.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

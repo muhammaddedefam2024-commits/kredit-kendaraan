@@ -17,6 +17,15 @@ namespace Kredit_Kendaraan
             InitializeComponent();
         }
 
+        private void FormAdmin_Load(object sender, EventArgs e)
+        {
+            // Tampilkan nama admin di subtitle sidebar
+            lblSidebarSub.Text = "Halo, " + DB.NamaUser;
+            // Otomatis buka dashboard saat pertama masuk
+            Form2 dash = new Form2() { TopLevel = false, TopMost = true };
+            CKF.form(dash, pnlContent);
+        }
+
         private void btnDataMaster_Click(object sender, EventArgs e)
         {
             FormDataMaster Data = new FormDataMaster() { TopLevel = false, TopMost = true };
@@ -41,7 +50,8 @@ namespace Kredit_Kendaraan
 
         private void btnLaporan_Click(object sender, EventArgs e)
         {
-
+            FCR Data = new FCR() { TopLevel = false, TopMost = true };
+            CKF.form(Data, pnlContent);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -49,6 +59,8 @@ namespace Kredit_Kendaraan
             DialogResult setuju = MessageBox.Show("Apakah mau keluar?", "Pemberitahuan", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (setuju == DialogResult.Yes)
             {
+                DB.NamaUser = "";
+                DB.RoleName = "";
                 Form1 F1 = new Form1();
                 F1.Visible = true;
                 this.Hide();
@@ -64,6 +76,12 @@ namespace Kredit_Kendaraan
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             Kendaraan Data = new Kendaraan() { TopLevel = false, TopMost = true };
+            CKF.form(Data, pnlContent);
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            FCR Data = new FCR() { TopLevel = false, TopMost = true };
             CKF.form(Data, pnlContent);
         }
     }

@@ -42,12 +42,12 @@ namespace Kredit_Kendaraan
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtdp = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtharga = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtken = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cmbKendaraan = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbPelanggan = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtsisa = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtnama = new Guna.UI2.WinForms.Guna2TextBox();
             this.Date = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.IDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pelanggan = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -271,29 +271,21 @@ namespace Kredit_Kendaraan
             this.txtharga.TabIndex = 32;
             this.txtharga.TextChanged += new System.EventHandler(this.txtharga_TextChanged);
             // 
-            // txtken
+            // cmbKendaraan
             // 
-            this.txtken.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.txtken.BorderRadius = 10;
-            this.txtken.BorderThickness = 3;
-            this.txtken.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtken.DefaultText = "";
-            this.txtken.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtken.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtken.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtken.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtken.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtken.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtken.ForeColor = System.Drawing.Color.Black;
-            this.txtken.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtken.Location = new System.Drawing.Point(251, 136);
-            this.txtken.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtken.Name = "txtken";
-            this.txtken.PlaceholderText = "Masukkan Nama Kendaraan";
-            this.txtken.SelectedText = "";
-            this.txtken.Size = new System.Drawing.Size(286, 60);
-            this.txtken.TabIndex = 31;
-            this.txtken.TextChanged += new System.EventHandler(this.txtawal_TextChanged);
+            this.cmbKendaraan.BackColor = System.Drawing.Color.White;
+            this.cmbKendaraan.BorderRadius = 10;
+            this.cmbKendaraan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbKendaraan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKendaraan.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbKendaraan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cmbKendaraan.ForeColor = System.Drawing.Color.Black;
+            this.cmbKendaraan.ItemHeight = 30;
+            this.cmbKendaraan.Location = new System.Drawing.Point(251, 136);
+            this.cmbKendaraan.Name = "cmbKendaraan";
+            this.cmbKendaraan.Size = new System.Drawing.Size(400, 36);
+            this.cmbKendaraan.TabIndex = 31;
+            this.cmbKendaraan.SelectedIndexChanged += new System.EventHandler(this.cmbKendaraan_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -323,8 +315,8 @@ namespace Kredit_Kendaraan
             this.panel2.Controls.Add(this.guna2Panel1);
             this.panel2.Controls.Add(this.txtdp);
             this.panel2.Controls.Add(this.txtharga);
-            this.panel2.Controls.Add(this.txtken);
-            this.panel2.Controls.Add(this.txtnama);
+            this.panel2.Controls.Add(this.cmbKendaraan);
+            this.panel2.Controls.Add(this.cmbPelanggan);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -368,29 +360,21 @@ namespace Kredit_Kendaraan
             this.txtsisa.TabIndex = 43;
             this.txtsisa.TextChanged += new System.EventHandler(this.txtsisa_TextChanged);
             // 
-            // txtnama
+            // cmbPelanggan
             // 
-            this.txtnama.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.txtnama.BorderRadius = 10;
-            this.txtnama.BorderThickness = 3;
-            this.txtnama.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtnama.DefaultText = "";
-            this.txtnama.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtnama.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtnama.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtnama.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtnama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtnama.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtnama.ForeColor = System.Drawing.Color.Black;
-            this.txtnama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtnama.Location = new System.Drawing.Point(251, 66);
-            this.txtnama.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtnama.Name = "txtnama";
-            this.txtnama.PlaceholderText = "Masukkan Nama";
-            this.txtnama.SelectedText = "";
-            this.txtnama.Size = new System.Drawing.Size(286, 60);
-            this.txtnama.TabIndex = 30;
-            this.txtnama.TextChanged += new System.EventHandler(this.txtnama_TextChanged);
+            this.cmbPelanggan.BackColor = System.Drawing.Color.White;
+            this.cmbPelanggan.BorderRadius = 10;
+            this.cmbPelanggan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbPelanggan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPelanggan.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbPelanggan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cmbPelanggan.ForeColor = System.Drawing.Color.Black;
+            this.cmbPelanggan.ItemHeight = 30;
+            this.cmbPelanggan.Location = new System.Drawing.Point(251, 66);
+            this.cmbPelanggan.Name = "cmbPelanggan";
+            this.cmbPelanggan.Size = new System.Drawing.Size(400, 36);
+            this.cmbPelanggan.TabIndex = 30;
+            this.cmbPelanggan.SelectedIndexChanged += new System.EventHandler(this.cmbPelanggan_SelectedIndexChanged);
             // 
             // Date
             // 
@@ -485,6 +469,7 @@ namespace Kredit_Kendaraan
             this.Controls.Add(this.panel2);
             this.Name = "Transaksi";
             this.Text = "Transaksi";
+            this.Load += new System.EventHandler(this.Transaksi_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -508,10 +493,10 @@ namespace Kredit_Kendaraan
         private System.Windows.Forms.DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2TextBox txtdp;
         private Guna.UI2.WinForms.Guna2TextBox txtharga;
-        private Guna.UI2.WinForms.Guna2TextBox txtken;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbKendaraan;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbPelanggan;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2TextBox txtnama;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtsisa;
         private Guna.UI2.WinForms.Guna2DateTimePicker Date;
